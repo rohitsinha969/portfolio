@@ -2,7 +2,7 @@ let currTotal = 0;
 let bufferValue = "0";
 let previousOperation;
 
-const screen = document.querySelector('.output-screen');
+const screen = document.querySelector('.screen');
 
 // function buttonClick(value) {
 //     if (isNaN(value)) {
@@ -26,7 +26,7 @@ function buttonClick(value) {
 
 function handleSymbol(symbol) {
     switch (symbol) {
-        case 'C':
+        case 'AC':
             bufferValue = '0';
             currTotal = 0;
             break;
@@ -99,7 +99,7 @@ function handleNumber(numberString) {
 }
 
 function init() {
-    document.querySelector('.calc-buttons-container').addEventListener('click', function (event) {
+    document.querySelector('.grid').addEventListener('click', function (event) {
         buttonClick(event.target.innerText);
     })
 }

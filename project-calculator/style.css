@@ -1,441 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500&display=swap');
-
-html {
+* {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Encode Sans', sans-serif;
-    background: linear-gradient(180deg, #274e13, #658B38);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
 }
 
-#heading {
-    text-align: center;
-    padding-bottom: 15px;
-    text-decoration: underline;
-    /* color: #AAF0D1; */
-    color: #728C00;
-    font-size: 20px;
+button {
+    font-size: inherit;
 }
 
-.wrapper {
-    padding: 6px;
-    margin: auto;
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px);
-    background: transparent;
-    border: 2px solid olive;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px #4B5320;
-    /* height: 70vw; */
-    width: 65vw;
-    max-height: 65vh;
-
+.container {
+    place-content: center;
+    min-height: 100vh;
+    display: grid;
 }
 
-.output-screen {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid #254117;
-    border-radius: 8px 8px 8px 8px;
-    box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-    color: thistle;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    width: 99%;
-    height: 10%;
-    max-height: 8vw;
-    text-indent: 8px;
-    margin-bottom: 5px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    /* width: 300px; */
+    gap: 5px;
 }
 
-.calc-buttons-container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px 10px 14px 14px;
-    border: 1px solid darkslategrey;
-    box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-    font-size: 20px;
-    font-weight: 800;
-    height: 80%;
-    padding: 5px 2px;
+.screen {
+    text-align: right;
+    padding: 0.5rem;
+    grid-column: 1 / span 4;
+    border: 1px solid black;
 }
 
-
-.calc-button-rows {
-    display: flex;
-    justify-content: space-between;
-    margin: 5% 5% 5%;
+.zero {
+    grid-column: 1 / span 2;
 }
 
-#row-top {
-    display: flex;
-    justify-content: space-between;
-    margin: 2% 5% 5%;
+.equal {
+    grid-row: -1 / -3;
+    grid-column: 4 / 5;
 }
 
-
-
-#calc-button-double {
-    width: 50%;
-    background: grey;
-    height: 8vw;
-    font-weight: 500;
-    font-size: 4vw;
-    text-align: center;
-    color: thistle;
-
-}
-
-#calc-button-divide {
-    width: 20%;
-    background: grey;
-    height: 8vw;
-    font-weight: 800;
-    font-size: 4vw;
-    text-align: center;
-    color: thistle;
-
-}
-
-#calc-button-backspace {
-    width: 20%;
-    background: grey;
-    height: 8vw;
-    font-weight: 800;
-    font-size: 4vw;
-    text-align: center;
-    color: thistle;
-}
-
-.calc-button {
-    width: 12vw;
-    height: 16vw;
-    padding-right: 5px;
-    background: wheat;
-    height: 40%;
-    font-weight: 800;
-    font-size: 10px;
-    text-align: center;
-    color: rgb(28, 34, 4);
-}
-
-/* media queries for screen compatibilty*/
-@media screen and (min-width: 300px) {
-    .wrapper {
-        padding: 6px;
-        margin: auto;
-        backdrop-filter: blur(5.5px);
-        -webkit-backdrop-filter: blur(5.5px);
-        background: transparent;
-        border: 2px solid olive;
-        border-radius: 16px;
-        box-shadow: 0 4px 30px #4B5320;
-        color: #232323;
-        /* backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px);
-        background: rgba(255, 255, 255, 0.30);
-        border: 1px solid cadetblue; */
-        /* height: 65vw;
-        width: 65vw; */
-        max-width: 60vw;
-        max-height: 63vw;
-    }
-
-    .output-screen {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid #254117;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        color: thistle;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        width: 99%;
-        height: 10%;
-        text-indent: 8px;
-        margin-bottom: 5px;
-    }
-
-    .calc-buttons-container {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px 10px 14px 14px;
-        border: 1px solid darkslategrey;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        flex-basis: 20%;
-        font-size: 20px;
-        font-weight: 800;
-        height: 80%;
-        padding: 5px 2px;
-    }
-
-
-    .calc-button-rows {
-        display: flex;
-        justify-content: space-between;
-        margin: 5% 5% 5%;
-    }
-
-    #row-top {
-        display: flex;
-        justify-content: space-between;
-        margin: 2% 5% 5%;
-    }
-
-
-
-    #calc-button-double {
-        width: 50%;
-        background: grey;
-        height: 8vw;
-        max-height: 8vw;
-        font-weight: 500;
-        font-size: 6vw;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-divide {
-        width: 20%;
-        background: grey;
-        height: 8vw;
-        font-weight: 800;
-        font-size: 4vw;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-backspace {
-        width: 20%;
-        background: grey;
-        height: 8vh;
-        font-weight: 800;
-        font-size: 4vw;
-        text-align: center;
-        color: thistle;
-    }
-
-    .calc-button {
-        width: 12vw;
-        height: 16vw;
-        padding-right: 5px;
-        background: wheat;
-        height: 40%;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: rgb(28, 34, 4);
+/* for tablet screens */
+@media (min-width: 768px) {
+    .grid {
+        transform: scale(1.5)
     }
 }
 
-@media screen and (min-width: 380px) {
-    .wrapper {
-        padding: 6px;
-        margin: auto;
-        backdrop-filter: blur(5.5px);
-        -webkit-backdrop-filter: blur(5.5px);
-        background: transparent;
-        border: 2px solid olive;
-        border-radius: 16px;
-        box-shadow: 0 4px 30px #4B5320;
-        /* height: 70vw; */
-        /* width: 65vw; */
-        max-height: 70vh;
-        max-width: 65vw;
-
-    }
-
-    .output-screen {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid #254117;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        color: thistle;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        width: 99%;
-        height: 10%;
-        text-indent: 8px;
-        margin-bottom: 5px;
-    }
-
-    .calc-buttons-container {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px 10px 14px 14px;
-        border: 1px solid darkslategrey;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        flex-basis: 20%;
-        font-size: 20px;
-        font-weight: 800;
-        height: 80%;
-        padding: 5px 2px;
-    }
-
-
-    .calc-button-rows {
-        display: flex;
-        justify-content: space-between;
-        margin: 5% 5% 5%;
-    }
-
-    #row-top {
-        display: flex;
-        justify-content: space-between;
-        margin: 2% 5% 5%;
-    }
-
-
-
-    #calc-button-double {
-        width: 50%;
-        background: grey;
-        height: 8vw;
-        max-height: 8vw;
-        font-weight: 500;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-divide {
-        width: 20%;
-        background: grey;
-        height: 8vw;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-backspace {
-        width: 20%;
-        background: grey;
-        height: 8vw;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-    }
-
-    .calc-button {
-        width: 12vw;
-        height: 16vw;
-        padding-right: 5px;
-        background: wheat;
-        height: 40%;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: rgb(28, 34, 4);
+/* for laptop screens */
+@media (min-width: 1440px) {
+    .grid {
+        transform: scale(2.0)
     }
 }
 
-@media screen and (min-width: 450px) {
-    .wrapper {
-        padding: 6px;
-        margin: auto;
-        backdrop-filter: blur(5.5px);
-        -webkit-backdrop-filter: blur(5.5px);
-        background: transparent;
-        border: 2px solid olive;
-        border-radius: 16px;
-        box-shadow: 0 4px 30px #4B5320;
-        /* height: 70vw; */
-        width: 65vw;
-        max-height: 80vw;
-
-    }
-
-    .output-screen {
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid #254117;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        color: thistle;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        width: 99%;
-        height: 10%;
-        text-indent: 8px;
-        margin-bottom: 5px;
-    }
-
-    .calc-buttons-container {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 10px 10px 14px 14px;
-        border: 1px solid darkslategrey;
-        box-shadow: 0 4px 5px rgba(35, 35, 35, 0.1);
-        flex-basis: 20%;
-        font-size: 20px;
-        font-weight: 800;
-        height: 80%;
-        padding: 5px 2px;
-    }
-
-
-    .calc-button-rows {
-        display: flex;
-        justify-content: space-between;
-        margin: 5% 5% 5%;
-    }
-
-    #row-top {
-        display: flex;
-        justify-content: space-between;
-        margin: 2% 5% 5%;
-    }
-
-
-
-    #calc-button-double {
-        width: 50%;
-        background: grey;
-        height: 8vw;
-        font-weight: 500;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-divide {
-        width: 20%;
-        background: grey;
-        height: 8vw;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-
-    }
-
-    #calc-button-backspace {
-        width: 20%;
-        background: grey;
-        height: 8vw;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: thistle;
-    }
-
-    .calc-button {
-        width: 12vw;
-        height: 16vw;
-        padding-right: 5px;
-        background: wheat;
-        height: 40%;
-        font-weight: 800;
-        font-size: 10px;
-        text-align: center;
-        color: rgb(28, 34, 4);
+/* for laptop screens */
+@media (min-width: 1920px) {
+    .grid {
+        transform: scale(2.5)
     }
 }

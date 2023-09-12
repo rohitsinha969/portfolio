@@ -5,50 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calc-Application</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <!--heading section-->
-    <h1 id="heading">Calculator</h1>
+    <div class="container">
+        <div class="grid">
+            <div class="screen">
+                0
+            </div>
 
-    <!--main container section-->
-    <div class="wrapper">
-        <div class="output-screen">
-            0
-        </div>
-        <div class="calc-buttons-container">
-            <div id="row-top">
-                <button id="calc-button-double">C</button>
-                <button id="calc-button-divide">&divide;</button>
-                <button id="calc-button-backspace">&larr;</button>
-            </div>
-            <div class="calc-button-rows">
-                <button class="calc-button">7</button>
-                <button class="calc-button">8</button>
-                <button class="calc-button">9</button>
-                <button class="calc-button">&times;</button>
-            </div>
-            <div class="calc-button-rows">
-                <button class="calc-button">4</button>
-                <button class="calc-button">5</button>
-                <button class="calc-button">6</button>
-                <button class="calc-button">&minus;</button>
-            </div>
-            <div class="calc-button-rows">
-                <button class="calc-button">1</button>
-                <button class="calc-button">2</button>
-                <button class="calc-button">3</button>
-                <button class="calc-button">&plus;</button>
-            </div>
-            <div class="calc-button-rows">
-                <button class="calc-button">00</button>
-                <button class="calc-button">0</button>
-                <button class="calc-button">.</button>
-                <button class="calc-button">&equals;</button>
-            </div>
+            <!-- row1 -->
+            <button class="clear">AC</button>
+            <button class="operator divide">&divide;</button>
+            <button class="operator multiply">&times;</button>
+            <button class="operator backspace">&larr;</button>
+            
+            <!-- row2 -->
+            <button class="num">7</button>
+            <button class="num">8</button>
+            <button class="num">9</button>
+            <button class="operator subs">&minus;</button>
+
+            <!-- row3 -->
+            <button class="num">4</button>
+            <button class="num">5</button>
+            <button class="num">6</button>
+            <button class="operator add">&plus;</button>
+
+            <!-- row4 -->
+            <button class="num">1</button>
+            <button class="num">2</button>
+            <button class="num">3</button>
+            <button class="operator equal">&equals;</button>
+
+            <!-- row5 -->
+            <button class="num zero">0</button>
+            <button class="num decimal">.</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 
