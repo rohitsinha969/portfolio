@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            border: 1px solid black;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* Change to column to arrange panels vertically */
+            overflow: hidden;
+        }
+
+        .panel {
+            width: 100%;
+            height: 400px;
+            /* Set height to 100px for each panel */
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            transform: translateX(100%);
+            /* Change transform to translateY to arrange vertically */
+            transition: transform 1s;
+        }
+
+        .panel.visible {
+            transform: translateX(0);
+        }
+
+        /* Give different colors to each panel */
+        
+        #panel1 {
+            background-color: #ff5733;
+        }
+
+        #panel2 {
+            background-color: #33ff57;
+        }
+
+        #panel3 {
+            background-color: #5733ff;
+        }
+
+        #panel4 {
+            background-color: #ff33a6;
+        }
+
+        #panel5 {
+            background-color: #a6ff33;
+        }
+
+        #panel6 {
+            background-color: #33a6ff;
+        }
+
+        #panel7 {
+            background-color: #f633ff;
+        }
+
+        #panel8 {
+            background-color: #ff9a33;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel visible" id="panel1">Panel 1</div>
+        <div class="panel" id="panel2">Panel 2</div>
+        <div class="panel" id="panel3">Panel 3</div>
+        <div class="panel" id="panel4">Panel 4</div>
+        <div class="panel" id="panel5">Panel 5</div>
+        <div class="panel" id="panel6">Panel 6</div>
+        <div class="panel" id="panel7">Panel 7</div>
+        <div class="panel" id="panel8">Panel 8</div>
+    </div>
+    <script>
+        const panels = document.querySelectorAll('.panel');
+
+        function checkScroll() {
+            panels.forEach(panel => {
+                const rect = panel.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    panel.classList.add('visible');
+                } else {
+                    panel.classList.remove('visible');
+                }
+            });
+        }
+
+        // Check the scroll position initially
+        checkScroll();
+
+        // Check the scroll position when scrolling
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+
+</html>
