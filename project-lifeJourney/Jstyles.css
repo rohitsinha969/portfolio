@@ -46,179 +46,77 @@ p {
 }
 
 .name {
+    position: relative;
     font-size: clamp(1rem, 4vw, 2rem);
     font-weight: 600;
 }
 
 .designation {
-    font-size: clamp(0.25rem, 4vw, 1.25rem);
+    font-size: clamp(0.2rem, 3vw, 1.25rem);
 }
 
-
-.cnctlgo {
-    max-width: clamp(40px, 12vw, 80px);
-    transition: all ease-in .1s;
-    cursor: pointer;
-}
-
-.cnctlgo:hover {
-    transform: scale(1.1);
-}
-
-/* #cnctlgo{
-    width: 100%;
-    max-width: 45px;
-} */
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.hero-name {
-    padding: 30px 0px 10px;
-    font-size: clamp(2rem, 4vw, 4rem);
-}
-
-.me {
-    padding: 5px 0px 10px;
-    font-size: clamp(1rem, 4vw, 1.5rem);
-
-}
-
-#hero-img {
-    max-width: 500px;
-    border-radius: 8px 50px 50px 8px;
-}
-
-.resume {
-    display: flex;
-    flex-direction: row;
-    padding: 20px 0px;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.resume-text {
-    font-size: clamp(0.5rem, 4vw, 1.5rem);
-    text-decoration: underline;
-    color: black;
-}
-
-.resume-img {
-    width: clamp(40px, 6vw, 80px);
-    transition: all ease-in .1s;
-    cursor: pointer;
-    animation: shake 2s;
-
-    /* When the animation is finished, start again */
-    animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
-
-/* .resume-img:hover {
-    transform: scale(1.25);
-} */
-
-.quote {
-    text-align: center;
-    font-size: clamp(2rem, 6vw, 3rem);
-    padding: 15px;
-}
-
-.hire-section {
-    display: flex;
-    flex-direction: column;
-    /* gap: 2rem; */
-}
-
-.upper {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 20px 20px;
-}
-
-.bar {
-    height: 2px;
-    background: black;
-    /* border: 2px solid black; */
+.image-container {
+    height: 40px;
     width: 40px;
+
 }
 
-.hire-heading {
-    font-size: clamp(1.5rem, 6vw, 3rem);
-    font-weight: 600;
+#cnctlgo {
+    max-width: clamp(40px, 12vw, 80px);
+    cursor: pointer;
 }
 
-.lower {
-    gap: 1rem;
-}
 
-.hire-me {
-    font-size: clamp(0.45rem, 4vw, 1rem);
-    padding: 0px 20px;
-}
-
-.social {
-    width: clamp(40px, 6vw, 80px);
-}
-
-.social-lower {
-    padding-block: 5px;
-    flex-direction: row;
+/* main section */
+/*  */
+/* welcome section */
+.main {
+    display: flex;
     justify-content: center;
-    gap: 2rem;
+    /* align-items: center; */
 }
 
-footer{
+.heading {
+    flex-direction: column;
+    padding-block: 20px 20px;
+}
+
+.welcome {
+    padding-block: 10px;
+}
+
+.false-wrapper {
+    display: inline-block;
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .15em solid rgb(49, 13, 13);
+    white-space: nowrap;
+    animation:
+        typing 3s forwards;
+    font-size: clamp(1.6rem, 4vw, 3rem);
+    width: 0;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        /* change this on media queries */
+        width: 93%
+    }
+}
+
+.welcome-about {
+    line-height: 1.6rem;
+    padding-block: 10px;
+}
+
+
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,18 +124,19 @@ footer{
     padding: 20px 15px;
 }
 
-.t1{
+.t1 {
     font-weight: 300;
     font-size: clamp(0.6rem, 4vw, 2rem);
     padding: 5px 0px 5px;
 }
 
-.t2{
+.t2 {
     font-weight: 300;
     font-size: clamp(0.35rem, 4vw, 1rem);
     padding-block: 5px 10px;
 }
-.t3{
+
+.t3 {
     font-weight: 600;
     font-size: clamp(0.35rem, 4vw, 1rem);
     padding-block: 5px 10px;

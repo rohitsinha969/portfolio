@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* Style to center the image */
+        body {
+            background: wheat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #image-container img {
+            object-fit: cover;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Image container -->
+    <div id="image-container">
+        <img src="/project-lifeJourney/images/img1.png" alt="Image 1">
+    </div>
+
+    <script>
+        // Array of image sources
+        var images = ['/project-lifeJourney/images/img1.png', '/project-lifeJourney/images/img2.png', '/project-lifeJourney/images/img3.png'];
+        var currentIndex = 0;
+
+        // Function to change the image
+        function changeImage() {
+            var imageContainer = document.getElementById('image-container');
+            imageContainer.innerHTML = '<img src="' + images[currentIndex] + '" alt="Image ' + (currentIndex + 1) + '">';
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        // Set interval to change image every 2 seconds
+        setInterval(changeImage, 2000);
+    </script>
+
+</body>
+
+</html>

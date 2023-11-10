@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+</head>
+<body>
+    <div id="text-container">
+        <span id="text"></span>
+    </div>
+
+    <script>
+        const textContainer = document.getElementById("text");
+        const textArray = ["Designation 1", "Designation 2", "Designation 3"]; // Replace with your desired designations
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeText() {
+            const currentText = textArray[textIndex];
+            if (isDeleting) {
+                textContainer.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textContainer.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            const typingSpeed = isDeleting ? 50 : 100; // Adjust typing and deleting speed as needed
+
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeText, 1000); // Delay before starting to delete
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+                setTimeout(typeText, 500); // Delay before typing next text
+            } else {
+                setTimeout(typeText, typingSpeed);
+            }
+        }
+
+        // Start typing
+        typeText();
+    </script>
+</body>
+</html>
