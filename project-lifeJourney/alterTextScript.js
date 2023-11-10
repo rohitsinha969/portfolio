@@ -1,5 +1,8 @@
 const textContainer = document.getElementById("text");
-const textArray = ["a social homosapien ", "a developer by profession", "an artist by creativity", "a photographer by passion"]; // Replace with your desired designations
+const textArray = ["a social homosapien \u{1F64B}",
+                    "a developer by profession \u{1F64B}",
+                    "an artist by creativity \u{1F9E1}",
+                    "a photographer by passion \u{1F64B}"]; // Replace with your desired designations
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

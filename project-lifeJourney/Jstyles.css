@@ -35,24 +35,26 @@ p {
 .topbox {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    /* gap: 5rem; */
     padding: 5px 0px;
 }
 
 .namebox {
     display: flex;
     flex-direction: column;
-
+    /* padding-top: 5px; */
 }
 
 .name {
-    position: relative;
-    font-size: clamp(1rem, 4vw, 2rem);
-    font-weight: 600;
+    /* position: relative; */
+    padding-block: 2px;
+    font-size: clamp(1rem, 5vw, 1.75rem);
+    font-weight: 700;
 }
 
 .designation {
-    font-size: clamp(0.2rem, 3vw, 1.25rem);
+    font-size: clamp(0.2rem, 2.8vw, 1rem);
 }
 
 .image-container {
@@ -78,7 +80,7 @@ p {
 
 .heading {
     flex-direction: column;
-    padding-block: 20px 20px;
+    padding-block: 32px 20px;
 }
 
 .welcome {
@@ -111,8 +113,9 @@ p {
 }
 
 .welcome-about {
-    line-height: 1.6rem;
+    line-height: clamp(1.6rem, 4vw, 2.5rem);
     padding-block: 10px;
+    font-size: clamp(0.95rem, 2vw, 1.4rem);
 }
 
 
