@@ -1,8 +1,8 @@
 const textContainer = document.getElementById("text");
 const textArray = ["a social homosapien \u{1F64B}",
-                    "a developer by profession \u{1F64B}",
-                    "an artist by creativity \u{1F9E1}",
-                    "a photographer by passion \u{1F64B}"]; // Replace with your desired designations
+                    "a developer by profession💻",
+                    "an artist by creativity \u{2764}",
+                    "a photographer by passion \u{1F4F8}"]; // Replace with your desired designations
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

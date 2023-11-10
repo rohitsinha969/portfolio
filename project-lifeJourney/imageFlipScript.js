@@ -1,5 +1,5 @@
 // Array of image sources
-var images = ['/project-lifeJourney/images/img1.png', '/project-lifeJourney/images/img2.png', '/project-lifeJourney/images/img3.png', '/project-lifeJourney/images/img4.png'];
+var images = ['/project-lifeJourney/images/img1-1.png', '/project-lifeJourney/images/img2.png', '/project-lifeJourney/images/img3.png', '/project-lifeJourney/images/img4.png'];
 var currentIndex = 0;
 
 // Function to change the image

@@ -54,6 +54,7 @@ p {
 }
 
 .designation {
+    position: end;
     font-size: clamp(0.2rem, 2.8vw, 1rem);
 }
 
@@ -87,29 +88,43 @@ p {
     padding-block: 10px;
 }
 
-.false-wrapper {
+/* .false-wrapper {
+    border: 1px solid saddlebrown;
     display: inline-block;
-}
-
-.typed-out {
+    height: 80px;
+    width: 100%;
     overflow: hidden;
-    border-right: .15em solid rgb(49, 13, 13);
+} */
+
+/* .typed-out {
+    width: 100%;
+    max-width: 400px;
+    text-wrap: balance;
     white-space: nowrap;
     animation:
-        typing 3s forwards;
-    font-size: clamp(1.6rem, 4vw, 3rem);
-    width: 0;
-}
+    typinggg 3s forwards;
+        width: 0;
+    } */
 
-@keyframes typing {
-    from {
-        width: 0
-    }
+/* @keyframes typinggg {
+        from {
+            height: 30px;
+            width: 0
+        }
+        
+        to {
+            change this on media queries
+            height: 80px;
+            width: 100%
+        }
+    } */
 
-    to {
-        /* change this on media queries */
-        width: 93%
-    }
+.typed-out {
+    width: 100%;
+    height: auto;
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3rem);
+    transition: all ease;
 }
 
 .welcome-about {
