@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'sssamarkan';
+    src: url('samarkan-font/SAMAN___.ttf');
+}
 :root {
     --ncode: 'Encode Sans';
+    --sam: 'sssamarkan';
 }
 
 * {
@@ -78,6 +83,7 @@ p {
 
 .hero-name {
     padding: 30px 0px 10px;
+    font-family: var(--sam);
     font-size: clamp(2rem, 4vw, 4rem);
 }
 

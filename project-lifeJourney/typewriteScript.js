@@ -18,7 +18,7 @@ animation();
 
 // set up text to print, each item in array is new line
 var aText = new Array(
-    "Hi \u{1F64B}, welcome to my world...");
+    "Hi \u{1F60F}, welcome to my world...");
 var iSpeed = 100; // time delay of print out
 var iIndex = 0; // start printing array at this posision
 var iArrLength = aText[0].length; // the length of the text array
@@ -38,7 +38,7 @@ function typewriter() {
     while (iRow < iIndex) {
         sContents += aText[iRow++] + '<br />';
     }
-    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "|";
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + " |";
     if (iTextPos++ == iArrLength) {
         iTextPos = 0;
         iIndex++;

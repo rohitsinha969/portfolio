@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "Samarkan";
+    src: url('./samarkan-font/SAMAN___.ttf');
+}
 :root {
     --ncode: 'Encode Sans';
+    --sam: "Samarkan";
 }
 
 * {
@@ -119,7 +124,9 @@ p {
         }
     } */
 
+
 .typed-out {
+    font-family: var(--sam);
     width: 100%;
     height: auto;
     font-weight: 600;
