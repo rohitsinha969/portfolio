@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: flex;
+        }
+
+        svg {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .background-circle,
+        .progress-circle {
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            animation: fillProgress 2s ease-out forwards;
+        }
+
+        @keyframes fillProgress {
+            from {
+                stroke-dasharray: 0, 502.4;
+            }
+
+            to {
+                svg {
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .background-circle,
+                .progress-circle {
+                    transform: rotate(-90deg);
+                    transform-origin: 50% 50%;
+                    animation: fillProgress 3s ease-out forwards;
+                }
+
+                @keyframes fillProgress {
+                    from {
+                        stroke-dasharray: 0, 502.4;
+                    }
+
+                    to {
+                        stroke-dasharray: 0, 502.4;
+                    }
+                }
+            }
+        }
+
+        .ooo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            /* padding: 50px 0; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+                <circle class="background-circle" cx="100" cy="100" r="60" fill="none" stroke="lightgray"
+                    stroke-width="10" />
+                <circle class="progress-circle" cx="100" cy="100" r="60" fill="none" stroke="#6f4e37" stroke-width="15"
+                    stroke-linecap="round" stroke-dasharray="0,502.4" />
+                <text x="100" y="110" text-anchor="middle" font-size="36" fill="black" class="percent-text">55 <tspan>%
+                    </tspan> </text>
+            </svg>
+        </div>
+        <div class="ooo">
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eos pariatur neque fuga maxime ipsam iste
+                placeat laboriosam. Quidem, eum.
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+                <circle class="background-circle" cx="100" cy="100" r="60" fill="none" stroke="lightgray"
+                    stroke-width="10" />
+                <circle class="progress-circle" cx="100" cy="100" r="60" fill="none" stroke="#6f4e37" stroke-width="15"
+                    stroke-linecap="round" stroke-dasharray="0,502.4" />
+                <text x="100" y="110" text-anchor="middle" font-size="36" fill="black" class="percent-text">50 <tspan>%
+                    </tspan> </text>
+            </svg>
+        </div>
+        <div class="ooo">
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eos pariatur neque fuga maxime ipsam iste
+                placeat laboriosam. Quidem, eum.
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+                <circle class="background-circle" cx="100" cy="100" r="60" fill="none" stroke="lightgray"
+                    stroke-width="10" />
+                <circle class="progress-circle" cx="100" cy="100" r="60" fill="none" stroke="#6f4e37" stroke-width="15"
+                    stroke-linecap="round" stroke-dasharray="0,502.4" />
+                <text x="100" y="110" text-anchor="middle" font-size="36" fill="black" class="percent-text">12 <tspan>%
+                    </tspan> </text>
+            </svg>
+        </div>
+        <div class="ooo">
+            <div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eos pariatur neque fuga maxime ipsam iste
+                placeat laboriosam. Quidem, eum.
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // const percentage = 48; // Replace with your desired percentage
+
+        // const progressCircle = document.querySelector('.progress-circle');
+        // const circumference = 2 * Math.PI * 80; // 2πr, where r is the radius (80 in this case)
+
+        // const strokeDasharrayValue = (percentage / 100) * circumference;
+        // progressCircle.style.strokeDasharray = `0, ${circumference}`;
+        // progressCircle.style.animationDuration = '2s'; // Set animation duration
+
+        // setTimeout(() => {
+        //   progressCircle.style.strokeDasharray = `${strokeDasharrayValue}, ${circumference}`;
+        // }, 100); // Delay the animation start
+
+
+        /*
+        const progressCircle = document.querySelector('.progress-circle');
+        const percentText = document.querySelector('.percent-text');
+        const circumference = 2 * Math.PI * 80;
+        
+        function updateProgress(percentage) {
+          const strokeDasharrayValue = (percentage / 100) * circumference;
+          progressCircle.style.animationDuration = '2s';
+          progressCircle.style.strokeDasharray = `0, ${circumference}`;
+          
+          setTimeout(() => {
+            progressCircle.style.strokeDasharray = `${strokeDasharrayValue}, ${circumference}`;
+          }, 100);
+          
+          percentText.textContent = `${percentage} %`;
+        }
+        
+        // Example usage: Update the progress based on a custom value
+        updateProgress(48); // Replace with your desired dynamic percentage value
+        */
+
+
+        const progressCircles = document.querySelectorAll('.progress-circle');
+        const percentTexts = document.querySelectorAll('.percent-text');
+        const circumference = 2 * Math.PI * 60;
+
+        // function updateProgressFromText() {
+        //     const textContent = percentText.textContent;
+        //     const percentage = parseFloat(textContent); // Extract the numerical value
+        //     const strokeDasharrayValue = (percentage / 100) * circumference;
+        //     progressCircle.style.animationDuration = '2s';
+        //     progressCircle.style.strokeDasharray = `0, ${circumference}`;
+
+        //     setTimeout(() => {
+        //         progressCircle.style.strokeDasharray = `${strokeDasharrayValue}, ${circumference}`;
+        //     }, 100);
+        // }
+        function updateProgressFromText() {
+            progressCircles.forEach((progressCircle, index) => {
+                const textContent = percentTexts[index].textContent;
+                const percentage = parseFloat(textContent); // Extract the numerical value
+                const radius = 60; // Updated radius
+                const circumference = 2 * Math.PI * radius; // Updated circumference calculation
+                const strokeDasharrayValue = (percentage / 100) * circumference;
+                progressCircle.style.animationDuration = '2s';
+                progressCircle.style.strokeDasharray = `0, ${circumference}`;
+
+                setTimeout(() => {
+                    progressCircle.style.strokeDasharray = `${strokeDasharrayValue}, ${circumference}`;
+                }, 100);
+            });
+        }
+
+        // Call the function to update the progress based on the value in the SVG text
+        updateProgressFromText();
+
+    </script>
+</body>
+
+</html>
