@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion with Background Images</title>
+    <style>
+        .accordion {
+            display: flex;
+            height: 100vh;
+        }
+        
+        .accordion .item {
+            background-size: cover;
+            background-position: left top;
+            background-repeat: no-repeat;
+            flex: 1;
+            transition: flex 300ms;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid red;
+        }
+
+        .accordion .item:hover {
+            flex: 5;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 300ms;
+        }
+
+        .item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-inner {
+            color: #fff;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        /* .bg-barcelona {
+            background-image: url(https://images.unsplash.com/photo-1578912996078-305d92249aa6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2592&q=60);
+        }
+
+        .bg-sydney {
+            background-image: url(https://images.unsplash.com/photo-1524293581917-878a6d017c71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80);
+        }
+
+        .bg-venice {
+            background-image: url(https://images.unsplash.com/photo-1453747063559-36695c8771bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2592&q=60);
+        }
+
+        .bg-singapore {
+            background-image: url(https://images.unsplash.com/flagged/photo-1562503542-2a1e6f03b16b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2555&q=80);
+        }
+
+        .bg-san-francisco {
+            background-image: url(https://images.unsplash.com/photo-1516675302207-722c37ce2f71?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2592&q=60);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="accordion">
+        <div class="item bg-barcelona">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <!-- TODO -->
+                    Barcelona
+                </div>
+            </div>
+        </div>
+        <div class="item bg-sydney">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <!-- TODO -->
+                    Sydney
+                </div>
+            </div>
+        </div>
+        <div class="item bg-venice">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <!-- TODO -->
+                    Venice
+                </div>
+            </div>
+        </div>
+        <div class="item bg-singapore">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <!-- TODO -->
+                    Singapore
+                </div>
+            </div>
+        </div>
+        <div class="item bg-san-francisco">
+            <div class="overlay">
+                <div class="overlay-inner">
+                    <!-- TODO -->
+                    San Francisco
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

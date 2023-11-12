@@ -1,28 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GitHub-Like Accordion with Dracula Theme and Line Numbers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/dracula.min.css">
     <style>
-        @font-face {
-            font-family: 'Samarkan';
-            font-style: normal;
-            /* font-weight: 800; */
-            font-display: swap;
-            src: url('../project-lifeJourney/samarkan-font/SAMAN___.ttf');
-            /* unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; */
+        /* Accordion styles */
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
         }
-
-        h1{
-            font-family: 'Samarkan';
+        .accordion-section {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 4px;
+            cursor: pointer;
+            display: flex;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        .section-heading {
+            padding: 10px 15px;
+            flex: 1;
+        }
+        .accordion-content {
+            background: #282a36; /* Dracula theme content background color */
+            color: #f8f8f2; /* Dracula theme text color */
+            border: 1px solid #44475a; /* Dracula theme border color */
+            border-radius: 4px; /* Add curved corners */
+            padding: 10px;
+            height: 300px; /* Define a height for the content area */
+            white-space: pre-wrap;
+            overflow: auto;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        .line-numbers {
+            background: #f6f8fa;
+            padding: 10px 15px;
+            text-align: right;
+            border-right: 1px solid #ccc;
+        }
+        .accordion-section:hover .accordion-content {
+            opacity: 1;
         }
     </style>
 </head>
-
 <body>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, tenetur.</h1>
+    <div class="accordion-container">
+        <div class="accordion-section">
+            <div class="section-heading">Section 1</div>
+            <div class="accordion-content" id="content-1">
+                <div class="line-numbers">
+                    1
+                    <br>
+                    2
+                    <br>
+                    3
+                    <br>
+                    4
+                    <br>
+                    5
+                    <br>
+                    6
+                    <br>
+                    7
+                    <br>
+                    8
+                    <br>
+                    9
+                    <br>
+                    10
+                </div>
+                <pre>
+                    <!-- Your code goes here -->
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>My HTML Page</title>
+                    </head>
+                    <body>
+                        <h1>Hello, World!</h1>
+                    </body>
+                    </html>
+                </pre>
+            </div>
+        </div>
+        <div class="accordion-section">
+            <div class="section-heading">Section 2</div>
+            <div class="accordion-content" id="content-2">
+                <div class="line-numbers">
+                    1
+                    <br>
+                    2
+                    <br>
+                    3
+                    <br>
+                    4
+                    <br>
+                    5
+                    <br>
+                    6
+                    <br>
+                    7
+                    <br>
+                    8
+                    <br>
+                    9
+                    <br>
+                    10
+                </div>
+                <pre>
+                    <!-- Your code goes here -->
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>Another HTML Page</title>
+                    </head>
+                    <body>
+                        <h1>Another Hello, World!</h1>
+                    </body>
+                    </html>
+                </pre>
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Accordion</title>
+    <style>
+        /* Vertical accordion styles */
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 80%;
+            /* Set the width to 80% */
+            margin: 0 auto;
+            font-family: 'Arial', sans-serif;
+            /* Use a font similar to VS Code */
+        }
+
+        .accordion-section {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            margin: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 2s;
+            /* Add a 2-second transition */
+        }
+
+        .accordion-section:hover+.accordion-content,
+        .accordion-content:hover {
+            display: block;
+        }
+
+        .accordion-content {
+            display: none;
+            height: 300px;
+            /* Set the height to 300px */
+            background: #44475a;
+            /* Dracula theme content background color */
+            color: #f8f8f2;
+            /* Dracula theme text color */
+            border: 1px solid #44475a;
+            /* Dracula theme border color */
+            border-radius: 4px;
+            /* Add curved corners */
+            padding: 10px;
+            overflow: auto;
+            /* Add scrollbars if content overflows */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="accordion-container">
+        <div class="accordion-section">Section 1</div>
+        <div class="accordion-content" id="content-1">
+            Content for Section 1 goes here. This is your box with Dracula theme. You can write your content here.
+        </div>
+        <div class="accordion-section">Section 2</div>
+        <div class="accordion-content" id="content-2">
+            Content for Section 2 goes here. Another Dracula-themed box. You can write your content here.
+        </div>
+    </div>
+</body>
+
+</html>
