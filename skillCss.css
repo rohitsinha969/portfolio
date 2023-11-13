@@ -1,87 +1,201 @@
-.wrapper {
+.skills{
     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-svg {
-    display: block;
+.acc-false-container{
+    margin-bottom: 1.5rem;
+}
+/* Vertical accordion styles */
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90%;
     margin: 0 auto;
+    font-family: 'Arial', sans-serif;
 }
 
-.background-circle,
-.progress-circle {
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    animation: fillProgress 2s ease-out forwards;
+.accordion-section {
+    background: #6c6c81e0;
+    color: #f0f0f0;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px 10px 5px 5px;
+    border-bottom: 1px solid #f8f8f2;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 2s ease-in;
+    /* border-bottom: none; */
+    display: flex;
+    justify-content: space-between;
 }
 
-@keyframes fillProgress {
+.accordion-section:hover,
+.accordion-section.active {
+    background: #44475a;
+    color: #e0e0e0;
+    transition: all ease 1s;
+    /* Change background color on hover or click */
+}
+
+.accordion-section.active+.accordion-content,
+.accordion-content:hover {
+    display: block;
+    border-top: none;
+}
+
+.accordion-content {
+    /* margin: 0 auto; */
+    max-width: aut;
+    display: none;
+    /* height: 430px; */
+    height: fit-content;
+    background: #44475a;
+    color: #f8f8f2;
+    border: 1px solid #44475a;
+    border-radius: 5px 5px 10px 10px;
+    padding: 10px;
+    overflow: auto;
+    border-top: none;
+    /* Add scrollbars if content overflows */
+}
+
+.dummy-button {
+    color: #44475a;
+    transition: transform 0.5s;
+}
+
+.dummy-button.rotated {
+    transform: rotate(180deg);
+}
+
+
+.codespace-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+
+.dots3 {
+    display: flex;
+    flex-direction: row;
+    /* gap: 0.5rem; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.codespace-btn {
+    background-color: #000000a1;
+    color: #e0e0e0;
+    /* border: 1px solid #f0f0f0; */
+    border-radius: 5px;
+    width: fit-content;
+    padding: 5px;
+    font-weight: 500;
+    /* margin: 8px 0px; */
+    cursor: help;
+}
+
+.dots {
+    padding-block: 0px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #44475a77;
+    stroke: 1px solid #000000;
+    background-color: #000000;
+    /* margin-top: 10px; */
+    margin-bottom: 0px;
+}
+
+.dot-fake-div {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.orangered {
+    background-color: orangered;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.template-code {
+    text-align: start;
+    justify-content: start;
+    max-width: 100%;
+    overflow: auto;
+}
+
+/* .line-numbers {
+    max-width: 20px;
+} */
+
+.code {
+    margin-top: -8px;
+    padding-top: 0px;
+    width: auto;
+    overflow: hidden;
+}
+
+.output-container {
+    /* margin: 0; */
+    /* height:auto */
+    display: flex;
+    flex-direction: column;
+    /* place-content: center; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.run-code {
+    margin-block: -30px 0.5rem;
+    color: whitesmoke;
+    background-color: #00ca4e;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: fit-content;
+    align-self: center;
+}
+
+.output-palate {
+    height: 7.5rem;
+    width: auto;
+    padding: 0.5rem;
+    border: 1px solid #f8f8f2;
+    border-radius: 10px;
+    background-color: #44475a;
+    color: rgb(250, 209, 132);
+}
+
+@keyframes typeWriter {
     from {
-        stroke-dasharray: 0, 502.4;
+        width: 0;
     }
 
     to {
-        svg {
-            display: block;
-            margin: 0 auto;
-        }
-
-        .background-circle,
-        .progress-circle {
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
-            animation: fillProgress 3s ease-out forwards;
-        }
-
-        @keyframes fillProgress {
-            from {
-                stroke-dasharray: 0, 502.4;
-            }
-
-            to {
-                stroke-dasharray: 0, 502.4;
-            }
-        }
+        width: 100%;
     }
 }
 
-.ooo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-align: center; */
-    /* padding: 50px 0; */
+.type-animation {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    animation: typeWriter 3s steps(30, end);
 }
 
-/* .skills{
-    display: flex;
-} */
-.technical{
-    display: flex;
-    flex-direction: column;
-}
-.frontend{
-    display: flex;
-    flex-direction: column;
-}
-.box-2el{
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    justify-content: center;
-    padding: 0;
-}
-.box-1el{
-    display: flex;
-    justify-content: space-around;
-}
-.svg-wrapper{
-    padding: 0;
-    transform: scale(0.75);
-}
-.image{
-    height: 50px;
-    width: 50px;
-}
-.percent-text{
-    visibility: hidden;
+div:empty:not(:focus):before {
+    content: attr(data-text);
+    color: wheat;
 }

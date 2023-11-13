@@ -9,8 +9,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;300;400;500&family=Poppins:wght@100&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="aboutCss.css">
+    <link rel="stylesheet" href="resumeCss.css">
     <link rel="stylesheet" href="skillCss.css">
+    <link rel="stylesheet" href="footerCss.css">
     <title>Personal Portfolio</title>
 </head>
 
@@ -69,7 +74,7 @@
         </section>
 
         <!-- skills section -->
-        <section>
+        <section class="skills">
             <section>
                 <div class="hire-section upper">
                     <div class="bar"></div>
@@ -95,110 +100,225 @@
                 </div>
             </section>
 
-            <section class="skills-type">
-                <!-- tech skills -->
-                <section class="technial">
-                    <!-- frontend -->
-                    <div class="frontend">
-                        
-                        <div class="box-2el">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                                    <circle class="background-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="lightgray" stroke-width="10" />
-                                    <image x="75" y="65" width="50" height="70"
-                                        xlink:href="https://www.vectorlogo.zone/logos/java/java-vertical.svg" />
-                                    <circle class="progress-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="#6f4e37" stroke-width="15" stroke-linecap="round"
-                                        stroke-dasharray="0,502.4" />
-                                    <text x="100" y="110" text-anchor="middle" font-size="36" fill="black"
-                                        class="percent-text">55
-                                        <tspan>%
-                                        </tspan>
-                                    </text>
-                                </svg>
-                            </div>
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                                    <circle class="background-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="lightgray" stroke-width="10" />
-                                    <image x="75" y="65" width="50" height="70"
-                                        xlink:href="https://www.vectorlogo.zone/logos/java/java-vertical.svg" />
-                                    <circle class="progress-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="#6f4e37" stroke-width="15" stroke-linecap="round"
-                                        stroke-dasharray="0,502.4" />
-                                    <text x="100" y="110" text-anchor="middle" font-size="36" fill="black"
-                                        class="percent-text">55
-                                        <tspan>%
-                                        </tspan>
-                                    </text>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="box-1el">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                                    <circle class="background-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="lightgray" stroke-width="10" />
-                                    <image x="75" y="65" width="50" height="70"
-                                        xlink:href="https://www.vectorlogo.zone/logos/java/java-vertical.svg" />
-                                    <circle class="progress-circle" cx="100" cy="100" r="60" fill="none"
-                                        stroke="#6f4e37" stroke-width="15" stroke-linecap="round"
-                                        stroke-dasharray="0,502.4" />
-                                    <text x="100" y="110" text-anchor="middle" font-size="36" fill="black"
-                                        class="percent-text">55
-                                        <tspan>%
-                                        </tspan>
-                                    </text>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- backend -->
-                    <div class="skills backend">
-                        <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                                <circle class="background-circle" cx="100" cy="100" r="60" fill="none"
-                                    stroke="lightgray" stroke-width="10" />
-                                <image x="75" y="65" width="50" height="70"
-                                    xlink:href="https://www.vectorlogo.zone/logos/java/java-vertical.svg" />
-                                <circle class="progress-circle" cx="100" cy="100" r="60" fill="none" stroke="#6f4e37"
-                                    stroke-width="15" stroke-linecap="round" stroke-dasharray="0,502.4" />
-                                <text x="100" y="110" text-anchor="middle" font-size="36" fill="black"
-                                    class="percent-text">55
-                                    <tspan>%
-                                    </tspan>
-                                </text>
-                            </svg>
-                        </div>
-                    </div>
-                    <!-- database -->
-                </section>
-                <!--  -->
-            </section>
-            <div class="skills-wrapper">
-                <div class="svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                        <circle class="background-circle" cx="100" cy="100" r="60" fill="none" stroke="lightgray"
-                            stroke-width="10" />
-                        <image x="75" y="65" width="50" height="70"
-                            xlink:href="https://www.vectorlogo.zone/logos/java/java-vertical.svg" />
-                        <circle class="progress-circle" cx="100" cy="100" r="60" fill="none" stroke="#6f4e37"
-                            stroke-width="15" stroke-linecap="round" stroke-dasharray="0,502.4" />
-                        <text x="100" y="110" text-anchor="middle" font-size="36" fill="black" class="percent-text">55
-                            <tspan>%
-                            </tspan>
-                        </text>
-                    </svg>
-                </div>
-                <div class="ooo">
+            <section class="acc-false-container">
+                <div class="accordion-container">
+                    <!-- skill section 1 - frontend -->
                     <div>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius eos pariatur neque fuga maxime
-                        ipsam iste
-                        placeat laboriosam. Quidem, eum.
+                        <div class="accordion-section" id="section-1">
+                            Frontend Development<span class="dummy-button">▼</span>
+                        </div>
+                        <div class="accordion-content" id="content-1">
+                            <div class="codespace-container">
+                                <div class="code-container">
+                                    <div class="template-code">
+                                        <div class="dots3">
+                                            <div class="dot-fake-div">
+                                                <div class="dots orangered"></div>
+                                                <div class="dots yellow"></div>
+                                                <div class="dots green"></div>
+                                            </div>
+                                            <div class="codespace-btn">codespace</div>
+                                        </div>
+                                        <pre class="code">
+                                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="output-container">
+                                    <button class="run-code" data-section="1">Run Code</button>
+                                    <div class="output-palate" id="output-1"
+                                        data-text="run the code & let the magic happen..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill section 2 - backend -->
+                    <div>
+                        <div class="accordion-section" id="section-2">
+                            Backend Development<span class="dummy-button">▼</span>
+                        </div>
+                        <div class="accordion-content" id="content-2">
+                            <div class="codespace-container">
+                                <div class="code-container">
+                                    <div class="template-code">
+                                        <div class="dots3">
+                                            <div class="dot-fake-div">
+                                                <div class="dots orangered"></div>
+                                                <div class="dots yellow"></div>
+                                                <div class="dots green"></div>
+                                            </div>
+                                            <div class="codespace-btn">codespace</div>
+                                        </div>
+                                        <pre class="code">
+                                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="output-container">
+                                    <button class="run-code" data-section="2">Run Code</button>
+                                    <div class="output-palate" id="output-2"
+                                        data-text="run the code & let the magic happen..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill section 3 - database -->
+                    <div>
+                        <div class="accordion-section" id="section-3">
+                            Database Development<span class="dummy-button">▼</span>
+                        </div>
+                        <div class="accordion-content" id="content-3">
+                            <div class="codespace-container">
+                                <div class="code-container">
+                                    <div class="template-code">
+                                        <div class="dots3">
+                                            <div class="dot-fake-div">
+                                                <div class="dots orangered"></div>
+                                                <div class="dots yellow"></div>
+                                                <div class="dots green"></div>
+                                            </div>
+                                            <div class="codespace-btn">codespace</div>
+                                        </div>
+                                        <pre class="code">
+                                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="output-container">
+                                    <button class="run-code" data-section="3">Run Code</button>
+                                    <div class="output-palate" id="output-3"
+                                        data-text="run the code & let the magic happen..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill section 4 - algortihm -->
+                    <div>
+                        <div class="accordion-section" id="section-4">
+                            Data/Algortihmic Development<span class="dummy-button">▼</span>
+                        </div>
+                        <div class="accordion-content" id="content-4">
+                            <div class="codespace-container">
+                                <div class="code-container">
+                                    <div class="template-code">
+                                        <div class="dots3">
+                                            <div class="dot-fake-div">
+                                                <div class="dots orangered"></div>
+                                                <div class="dots yellow"></div>
+                                                <div class="dots green"></div>
+                                            </div>
+                                            <div class="codespace-btn">codespace</div>
+                                        </div>
+                                        <pre class="code">
+                                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="output-container">
+                                    <button class="run-code" data-section="4">Run Code</button>
+                                    <div class="output-palate" id="output-4"
+                                        data-text="run the code & let the magic happen..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- skill section 5 - others -->
+                    <div>
+                        <div class="accordion-section" id="section-5">
+                            Interpersonal Knacks<span class="dummy-button">▼</span>
+                        </div>
+                        <div class="accordion-content" id="content-5">
+                            <div class="codespace-container">
+                                <div class="code-container">
+                                    <div class="template-code">
+                                        <div class="dots3">
+                                            <div class="dot-fake-div">
+                                                <div class="dots orangered"></div>
+                                                <div class="dots yellow"></div>
+                                                <div class="dots green"></div>
+                                            </div>
+                                            <div class="codespace-btn">codespace</div>
+                                        </div>
+                                        <pre class="code">
+                                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;title&gt;Hello, world!&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="output-container">
+                                    <button class="run-code" data-section="5">Run Code</button>
+                                    <div class="output-palate" id="output-5"
+                                        data-text="run the code & let the magic happen..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </section>
 
 
@@ -262,6 +382,8 @@
     </footer>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="skillScript.js"></script>
 </body>
 

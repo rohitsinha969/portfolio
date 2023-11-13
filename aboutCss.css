@@ -1,0 +1,22 @@
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.hero-name {
+    padding: 30px 0px 10px;
+    font-family: var(--sam);
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.me {
+    padding: 5px 0px 10px;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+
+}
+
+#hero-img {
+    max-width: 500px;
+    border-radius: 8px 50px 50px 8px;
+}
