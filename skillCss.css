@@ -1,12 +1,18 @@
-.skills{
+:root {
+    --ncode: 'Encode Sans';
+    --sam: 'sssamarkan';
+}
+
+.skills {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.acc-false-container{
+.acc-false-container {
     margin-bottom: 1.5rem;
 }
+
 /* Vertical accordion styles */
 .accordion-container {
     display: flex;
@@ -14,14 +20,17 @@
     gap: 10px;
     max-width: 90%;
     margin: 0 auto;
-    font-family: 'Arial', sans-serif;
+    font-family: var(--ncode);
 }
 
 .accordion-section {
-    background: #6c6c81e0;
+    /* background: #6c6c81e0; */
+    background: #151515a2;
     color: #f0f0f0;
+    letter-spacing: 2px;
     /* border: 1px solid #ccc; */
     border-radius: 10px 10px 5px 5px;
+    border: none;
     border-bottom: 1px solid #f8f8f2;
     padding: 10px;
     cursor: pointer;
@@ -33,7 +42,8 @@
 
 .accordion-section:hover,
 .accordion-section.active {
-    background: #44475a;
+    /* background: #44475a; */
+    background: #3c415cbd;
     color: #e0e0e0;
     transition: all ease 1s;
     /* Change background color on hover or click */
@@ -47,13 +57,15 @@
 
 .accordion-content {
     /* margin: 0 auto; */
-    max-width: aut;
+    max-width: auto;
     display: none;
+    font-family: var(--ncode);
     /* height: 430px; */
     height: fit-content;
-    background: #44475a;
+    /* background: #44475a; */
+    background: #3c415cbd;
     color: #f8f8f2;
-    border: 1px solid #44475a;
+    border: 1px solid none;
     border-radius: 5px 5px 10px 10px;
     padding: 10px;
     overflow: auto;
@@ -66,6 +78,16 @@
     transition: transform 0.5s;
 }
 
+.run-code:hover{
+    transform: rotate(360deg);
+    transition: all ease-out 0.75s;
+}
+/* .run-code::after{
+    content: "";
+}
+.run-code:hover:after{
+    content: "...";
+} */
 .dummy-button.rotated {
     transform: rotate(180deg);
 }
@@ -74,6 +96,7 @@
 .codespace-container {
     display: flex;
     flex-direction: column;
+    /* margin: -10px; */
     /* justify-content: center; */
 }
 
@@ -89,12 +112,14 @@
 .codespace-btn {
     background-color: #000000a1;
     color: #e0e0e0;
-    /* border: 1px solid #f0f0f0; */
+    border: none;
     border-radius: 5px;
+    letter-spacing: 1px;
     width: fit-content;
+    height: fit-content;
+    align-self: center;
     padding: 5px;
-    font-weight: 500;
-    /* margin: 8px 0px; */
+    font-weight: 100;
     cursor: help;
 }
 
@@ -128,6 +153,15 @@
     background-color: #00ca4e;
 }
 
+.btn-fake-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    /* padding-right: 8px; */
+}
+
 .template-code {
     text-align: start;
     justify-content: start;
@@ -147,29 +181,29 @@
 }
 
 .output-container {
-    /* margin: 0; */
-    /* height:auto */
     display: flex;
     flex-direction: column;
-    /* place-content: center; */
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 .run-code {
-    margin-block: -30px 0.5rem;
-    color: whitesmoke;
-    background-color: #00ca4e;
+    font-size: larger;
+    text-align: center;
+    font-family: var(--ncode);
+    color: rgba(186, 189, 197, 0.349);
+    background-color: #2ac064;
+    background: transparent;
     border: none;
     border-radius: 5px;
     padding: 5px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    width: fit-content;
+    font-weight: 600;
+    /* letter-spacing: 1px; */
+    width: 30px;
     align-self: center;
+    height: auto;
 }
 
 .output-palate {
+    font-family: var(--ncode);
     height: 7.5rem;
     width: auto;
     padding: 0.5rem;
@@ -191,11 +225,17 @@
 
 .type-animation {
     /* white-space: nowrap; */
+    font-family: var(--ncode);
     overflow: hidden;
     animation: typeWriter 3s steps(30, end);
 }
 
-div:empty:not(:focus):before {
+
+#output-1:empty::before{
+    content: "tap the run button";
+    color: #e0e0e0;
+}
+/* div:empty:not(:focus)::before {
     content: attr(data-text);
     color: wheat;
-}
+} */

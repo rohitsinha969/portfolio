@@ -8,6 +8,12 @@ sections.forEach(section => {
         button.classList.toggle("rotated");
     });
 });
+sections.forEach(section => {
+    section.addEventListener("click", () => {
+        const button = section.querySelector(".run-code");
+        button.classList.toggle("rotated");
+    });
+});
 
 
 
