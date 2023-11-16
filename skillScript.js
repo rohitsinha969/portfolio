@@ -29,7 +29,9 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "// Frontend Development \u{12810}",
                 "\xa0\xa0\xa0HTML",
                 "\xa0\xa0\xa0CSS",
-                "\xa0\xa0\xa0Javascript - DOM Manipulation/Advanced Js",
+                "\xa0\xa0\xa0Javascript",
+                "\xa0\xa0\xa0DOM Manipulation/Advanced Js",
+                "\xa0\xa0\xa0React (Noobie😝)",
                 "\xa0\xa0\xa0JSON",
                 // Add more lines as needed for section 1
             ];
@@ -38,8 +40,9 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "// Backend Development \u{EA105}",
                 "\xa0\xa0\xa0Java - Advanced Java",
                 "\xa0\xa0\xa0Collection Framework",
-                "\xa0\xa0\xa0C++",
+                "\xa0\xa0\xa0Git/Github - Version Control System",
                 "\xa0\xa0\xa0Node Js",
+                "\xa0\xa0\xa0API -RESTful/REST",
                 // Add more lines as needed for section 2
             ];
         } else if (section === "3") {
