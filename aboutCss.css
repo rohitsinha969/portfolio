@@ -7,7 +7,8 @@
 .hero-name {
     padding: 30px 0px 10px;
     font-family: var(--sam);
-    font-size: clamp(2rem, 4vw, 4rem);
+    font-size: clamp(2rem, 6vw, 4rem);
+    word-wrap: break-word;
 }
 
 .me {
@@ -19,4 +20,22 @@
 #hero-img {
     max-width: 500px;
     border-radius: 8px 50px 50px 8px;
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        /* gap: 1rem; */
+    }
+    .main-about-div{
+        /* min-height: fit-content; */
+        width:40%;
+        padding: 50px 0px 0px;
+    }
+    .main-image-div{
+        min-height: fit-content;
+        width:80%;
+        padding: 50px 0px 0px;
+    }
 }

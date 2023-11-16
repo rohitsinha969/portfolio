@@ -9,7 +9,7 @@
     gap: 2rem;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,19 +17,32 @@ footer{
     padding: 20px 15px;
 }
 
-.t1{
+.t1 {
     font-weight: 300;
-    font-size: clamp(0.6rem, 4vw, 2rem);
+    font-size: clamp(0.6rem, 4vw, 1.5rem);
     padding: 5px 0px 5px;
 }
 
-.t2{
+.t2 {
     font-weight: 300;
     font-size: clamp(0.35rem, 4vw, 1rem);
     padding-block: 5px 10px;
 }
-.t3{
+
+.t3 {
     font-weight: 600;
     font-size: clamp(0.35rem, 4vw, 1rem);
     padding-block: 5px 10px;
+}
+
+@media only screen and (min-width: 568px) {
+    .social-lower {
+        gap: 4rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .social-lower {
+        gap: 6rem;
+    }
 }
