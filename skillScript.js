@@ -43,6 +43,7 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "\xa0\xa0\xa0Git/Github - Version Control System",
                 "\xa0\xa0\xa0Node Js",
                 "\xa0\xa0\xa0API -RESTful/REST",
+                "\xa0\xa0\xa0GCP/Microsoft Azure - Cloud Architecture",
                 // Add more lines as needed for section 2
             ];
         } else if (section === "3") {
@@ -51,16 +52,16 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "\xa0\xa0\xa0SQL",
                 "\xa0\xa0\xa0MySQL - Workbench/Shell",
                 "\xa0\xa0\xa0MongoDB",
-                // Add more lines as needed for section 2
+                // Add more lines as needed for section 3
             ];
         } else if (section === "4") {
             texts = [
                 "// Data/Algorithmic Development \u{DB105}",
                 "\xa0\xa0\xa0Data Structure Designing",
                 "\xa0\xa0\xa0Algorithmic Development",
-                "\xa0\xa0\xa0Algorithmic Implementation/Analysis",
+                "\xa0\xa0\xa0Complex Algorithm Implementation/Analysis",
                 "\xa0\xa0\xa0Dynamic Data Management",
-                // Add more lines as needed for section 2
+                // Add more lines as needed for section 4
             ];
         } else if (section === "5") {
             texts = [
@@ -68,7 +69,7 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "\xa0\xa0\xa0Project Development",
                 "\xa0\xa0\xa0Team Building/Strategy Planning",
                 "\xa0\xa0\xa0Adaptibility to competetive situations",
-                // Add more lines as needed for section 2
+                // Add more lines as needed for section 5
             ];
         }
 
