@@ -68,7 +68,7 @@ document.querySelectorAll(".run-code").forEach(button => {
                 "// Interpersonal/Soft Skills \u{DB105}",
                 "\xa0\xa0\xa0Project Development",
                 "\xa0\xa0\xa0Team Building/Strategy Planning",
-                "\xa0\xa0\xa0Adaptibility to competetive situations",
+                "\xa0\xa0\xa0Adaptibility to competitive situations",
                 // Add more lines as needed for section 5
             ];
         }

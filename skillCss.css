@@ -56,11 +56,9 @@
 
 .accordion-content {
     background: #2e3138e5;
-    /* background: #1b0101; */
     max-width: auto;
     display: none;
     font-family: var(--ncode);
-    /* height: 430px; */
     height: fit-content;
     /* background: #44475a; */
     color: #f8f8f2;
@@ -199,7 +197,8 @@
 
 .output-palate {
     font-family: var(--ncode);
-    height: 8.3rem;
+    /* height: 8.3rem; */
+    height: fit-content;
     width: auto;
     padding: 0.5rem;
     border: 2px ridge #989898;
@@ -209,6 +208,10 @@
     content: none;
     user-select: none;
 }
+
+/* .specialPalate1, .specialPalate2{
+    height: fit-content;
+} */
 
 @keyframes typeWriter {
     from {
