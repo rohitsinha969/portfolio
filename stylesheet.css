@@ -62,7 +62,7 @@ p {
 
 
 .cnctlgo {
-    max-width: clamp(40px, 12vw, 80px);
+    max-width: clamp(30px, 9vw, 60px);
     transition: all ease-in .1s;
     cursor: pointer;
 }
